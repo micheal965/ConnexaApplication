@@ -1,0 +1,41 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# SQLite / Local Databases
+*.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Publish outputs
+*.Publish.xml
+publish/
+
+# Environment
+Connexa.API/appsettings.json
+.env
+
+# Others
+*.swp
+*.DS_Store
+Thumbs.db
