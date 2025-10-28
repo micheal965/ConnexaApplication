@@ -1,4 +1,5 @@
 using Connexa.API.Data;
+using Connexa.API.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,10 +10,10 @@ namespace Connexa.API.Controllers
     [ApiController]
     public class MembersController(AppDbContext _dbContext) : ControllerBase
     {
-        [HttpGet]
-        public async Task<IActionResult> GetMembers()
+        [HttpGet("GetMembers")]
+        public async Task<ActionResult<List<ApplicationUser>>> GetMembers()
         {
-            return Ok(_dbContext.ApplicationUsers.ToListAsync());
+            return Ok(await _dbContext.ApplicationUsers.ToListAsync());
         }
     }
 }
